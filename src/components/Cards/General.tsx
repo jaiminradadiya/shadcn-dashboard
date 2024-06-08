@@ -1,11 +1,18 @@
 'use client';
 
 import { ResponsiveBump } from "@nivo/bump";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
 
-const MyResponsiveBump = ({ data }) => {
+const MyResponsiveBump = (props: any) => {
   return (
     <ResponsiveBump
-      data={data}
+      data={props.data}
       colors={{ scheme: 'spectral' }}
       lineWidth={3}
       activeLineWidth={6}
@@ -176,8 +183,14 @@ export default function General() {
   ];
 
   return (
-    <div className="w-full h-[400px]">
-      <MyResponsiveBump data={data} />
-    </div>
+    <Card className="w-full">
+      <CardHeader>
+        <CardTitle>This Week</CardTitle>
+        <CardDescription>There are the results of this week.</CardDescription>
+      </CardHeader>
+      <CardContent className="grid gap-4 h-[400px]">
+        <MyResponsiveBump data={data} />
+      </CardContent>
+    </Card>
   );
 }
