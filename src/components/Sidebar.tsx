@@ -4,6 +4,7 @@ import { Bell, Cookie, CreditCard, Icon, Inbox, MessageSquare, Settings, User } 
 // import UserItem from "./UserItem";
 import UserItem from "useritem";
 import { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList, CommandSeparator } from "./ui/command";
+import Link from "next/link";
 
 export default function Sidebar() {
     const menuList = [
@@ -84,6 +85,11 @@ export default function Sidebar() {
             </Command>
 
         </div>
-        <div className="">Setting / Notifications</div>
+        <div className="">
+            <Link href="/team" className="flex items-center gap-2">
+                <Settings />
+                <span>Team Settings</span>
+            </Link>
+        </div>
     </div>
 }
