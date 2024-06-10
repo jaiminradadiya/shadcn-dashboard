@@ -52,7 +52,7 @@ const MyResponsiveBump = (props: any) => {
         legendOffset: -40,
         truncateTickAt: 0
       }}
-      margin={{ top: 40, right: 100, bottom: 40, left: 60 }}
+      margin={{ top: 20, right: 60, bottom: 20, left: 20 }}
       axisRight={null}
     />
   );

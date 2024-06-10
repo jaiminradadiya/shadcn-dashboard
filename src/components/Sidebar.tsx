@@ -1,7 +1,8 @@
 'use client';
 
 import { Bell, Cookie, CreditCard, Icon, Inbox, MessageSquare, Settings, User } from "lucide-react";
-import UserItem from "./UserItem";
+// import UserItem from "./UserItem";
+import UserItem from "useritem";
 import { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList, CommandSeparator } from "./ui/command";
 
 export default function Sidebar() {
@@ -55,22 +56,28 @@ export default function Sidebar() {
     ]
 
 
-    return <div className="fixed flex flex-col w-[300px] min-w-[300px] border-r min-h-screen p-4 gap-4">
+    return <div className="fixed flex flex-col w-[300px] min-w-[300px] p-4 min-h-screen">
         <div>
-            <UserItem />
+            {/* <UserItem /> */}
+            <UserItem
+                title="Jaimin Radadiya"
+                description="rj45@gmail.com"
+                shadow={false}
+                style={{ border: '1px solid red' }}
+            />
         </div>
         <div className="grow">
-            <Command style={{overflow: 'visible'}}>
-                <CommandList style={{overflow: 'visible'}}>
+            <Command style={{ overflow: 'visible' }}>
+                <CommandList style={{ overflow: 'visible' }}>
                     <CommandEmpty>No results found.</CommandEmpty>
                     {
                         menuList.map((menu: any, key: number) => (
                             <CommandGroup key={key} heading={menu.group}>
-                                {menu.items.map((options: any, optionsKey: number) => 
-                                <CommandItem key={optionsKey} className="flex gap-2 cursor-pointer">
-                                    {options.Icon}
-                                    {options.text}
-                                </CommandItem>)}
+                                {menu.items.map((options: any, optionsKey: number) =>
+                                    <CommandItem key={optionsKey} className="flex gap-2 cursor-pointer">
+                                        {options.Icon}
+                                        {options.text}
+                                    </CommandItem>)}
                             </CommandGroup>))}
                     <CommandSeparator />
                 </CommandList>

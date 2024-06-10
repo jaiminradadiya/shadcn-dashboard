@@ -14,7 +14,7 @@ export default function Home() {
         <Calendar />
       </div>
     </div>
-    <div className="grid grid-cols-3 gap-[32px] h-[300px] overflow-hidden">
+    <div className="grid lg:grid-cols-3 gap-[32px] lg:h-[300px] overflow-hidden">
       <Lines />
       <Card className="overflow-y-scroll">
           <CardHeader>
@@ -30,7 +30,7 @@ export default function Home() {
             <CardTitle>Users</CardTitle>
             <CardDescription>There are the users of this month.</CardDescription>
           </CardHeader>
-          <div className="px-4">
+          <div className="px-2 ">
             <DataTableDemo />
           </div>
         </Card>
