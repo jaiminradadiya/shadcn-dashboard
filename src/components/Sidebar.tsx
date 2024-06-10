@@ -59,11 +59,11 @@ export default function Sidebar() {
 
     return <div className="fixed flex flex-col w-[300px] min-w-[300px] p-4 min-h-screen">
         <div>
-            {/* <UserItem /> */}
             <UserItem
                 title="Jaimin Radadiya"
                 description="rj45@gmail.com"
                 shadow={false}
+                backgroundColor="rgba(125,24,66,1)"
                 style={{ border: '1px solid red' }}
             />
         </div>

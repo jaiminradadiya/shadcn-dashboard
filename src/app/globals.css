@@ -76,4 +76,18 @@
   .bg-card{
     overflow: hidden!important;
   }
+  .tag {
+    @apply capitalize;
+  }
+  .tag.admin {
+    @apply text-orange-500 hover:bg-orange-100 bg-orange-200;
+  } 
+  .tag.viewer {
+    @apply text-green-500 hover:bg-green-100 bg-green-200;
+  }
+  .tag.active {
+    @apply text-sky-500 hover:bg-sky-100 bg-sky-200;
+  }.tag.pending {
+    @apply text-amber-500 hover:bg-amber-100 bg-amber-200;
+  } 
 }
